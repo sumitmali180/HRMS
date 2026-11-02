@@ -1,0 +1,4 @@
+# .env
+## LOCAL
+VITE_API_BASE_URL=https://localhost:44372/api/
+
