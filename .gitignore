@@ -1,0 +1,130 @@
+# ==============================================================================
+# HRMS Comprehensive .gitignore
+# Prevents sensitive credentials, binaries, environment keys, and build caches
+# from being exposed publicly on GitHub.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Credentials, Passwords & Private Internal Notes
+# ------------------------------------------------------------------------------
+credentials.md
+credentials*.md
+prompt.md
+next.md
+*.pem
+*.key
+*.pfx
+*.p12
+*.cer
+*.crt
+secrets.json
+
+# ------------------------------------------------------------------------------
+# 2. Environment Variables & Secret Configuration Files
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+appsettings.Development.json
+appsettings.Production.json
+appsettings.*.local.json
+*.local
+
+# ------------------------------------------------------------------------------
+# 3. .NET / C# Build Outputs, Binaries & Intermediate Files
+# ------------------------------------------------------------------------------
+**/bin/
+**/obj/
+**/out/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.runtimeconfig.json
+*.deps.json
+project.lock.json
+project.assets.json
+*.nuget.props
+*.nuget.targets
+
+# Visual Studio & OmniSharp artifacts
+.vs/
+.vscode/.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.userprefs
+*.launchSettings.json.user
+.ionide/
+
+# ------------------------------------------------------------------------------
+# 4. Node.js & Frontend Build Outputs
+# ------------------------------------------------------------------------------
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# Node package manager debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# 5. Database Data & Backup Dumps
+# ------------------------------------------------------------------------------
+*.bak
+*.mdf
+*.ldf
+*.ndf
+*.dacpac
+*.bacpac
+
+# ------------------------------------------------------------------------------
+# 6. User Uploads, Attachments & Temporary Files
+# ------------------------------------------------------------------------------
+**/uploads/
+**/receipts/
+**/documents/uploads/
+**/temp/
+**/tmp/
+*.tmp
+
+# ------------------------------------------------------------------------------
+# 7. Operating System & IDE Specific Files
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+
+# JetBrains (Rider / WebStorm / IDEA)
+.idea/
+*.iws
+*.iml
+
+# VS Code settings (ignore workspace state, keep shared settings/extensions)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
